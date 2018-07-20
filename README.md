@@ -87,6 +87,10 @@ cls={['a', arr]} // => 'a b c'
 1.  In the entry point of your app include:
 
 ```
+import { StyleSheet } from "react-native";
+import { build } from "./theme";
+App.build = options => build(options, StyleSheet);
+
 App.build({
     /* REM parameter is optional, default is 16 */
     rem: screenWidth > 340 ? 18 : 16,
@@ -111,8 +115,8 @@ class MyComponent extends React.Component {
 ...
 ```
 
-/_ or if you use simple functions _/
-wrap(() => <Text cls="b">Hi there!</Text>)
+_or if you use simple functions_
+`wrap(() => <Text cls="b">Hi there!</Text>)`
 
 ```
 If you prefer to use a different propName instead of `cls`, specify the name in the options:
