@@ -1,0 +1,17 @@
+{
+  "version": "0.1.9",
+  "name": "@agiletechvn/react-theme",
+  "description": "🚇 The JavaScript theme system for React Native.",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agiletechvn/react-theme.git"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "react": "16.4.1"
+  }
+}
