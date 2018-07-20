@@ -92,6 +92,15 @@ import { build } from "./theme";
 App.build = options => build(options, StyleSheet);
 
 App.build({
+    clsPropName: "cls", 
+    /* default is cap of clsPropName, propCls => propStyle */
+    clsPropNameCap: "Cls", 
+    clsMap: {
+       cls: "style",
+       contentContainerCls: "contentContainerStyle",
+       containerCls: "containerStyle",
+       wrapperCls: "wrapperStyle"
+    },
     /* REM parameter is optional, default is 16 */
     rem: screenWidth > 340 ? 18 : 16,
     /* fontRem parameter is optional to allow adjustment in font-scaling. default falls back to rem */
