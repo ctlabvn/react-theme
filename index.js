@@ -105,9 +105,12 @@ const recursiveStyle = elementsTree => {
     if (options.clsPropName) {
       mapPropKeys[options.clsPropName] = "style";
       for (let propKey in props) {
-        if (propKey.endsWith(options.clsPropNameCap)) {
+        if (
+          propKey.substr(-options.clsPropName.length) === options.clsPropNameCap
+        ) {
           mapPropKeys[propKey] =
-            propKey.slice(0, -options.clsPropName.length) + "Style";
+            propKey.substr(0, propKey.length - options.clsPropName.length) +
+            "Style";
         }
       }
     }
